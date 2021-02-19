@@ -1,23 +1,30 @@
-<body>
+<app-header (name)='getPokemon($event)'  ></app-header>
+<!-- <body>
+
+    <div *ngIf="error">
+        <div class="alert alert-danger" role="alert">
+            NO EXISTE ESE POKEMON INTENTA DE NUEVO 
+          </div>
+    </div>
     <div class="container principal">
 		<div class="">
 			<div class="col-lg-12 text-center">
 	            <div class="row">
-                    <!--tarjeta 1-->
+                    
 	                <div class="col-lg-4 col-md-6 mb-4">
 	                  	<div class="card-section border rounded p-3 mt-3">
                             <div>
-                                <img src="{{img}}" alt="" class="card-body-img">
+                                <img src="{{data.img}}" alt="" class="card-body-img">
                             </div>
 	                  		<div class="card-header-first rounded pb-5">
-		                      	<h2 class="card-header-title text-black pt-3 "><strong>{{name}}</strong></h2>
+		                      	<h2 class="card-header-title text-black pt-3 "><strong>{{data.name}}</strong></h2>
                                 <div class="row text-white">
                                     <div class="col-4">
-                                        <span class="">{{type}}</span>
+                                        <span class="">{{data.type}}</span>
                                     </div> 
-                                    <span class=" col-4 ">{{hp}} hp</span>
+                                    <span class=" col-4 ">{{data.hp}} hp</span>
                                     <div class="col-4">
-                                        <span class="">{{exp}} exp</span>
+                                        <span class="">{{data.exp}} exp</span>
                                     </div>
                                 </div>
                             </div>
@@ -28,24 +35,24 @@
                                       <ng-template ngbNavContent>
                                     
                                             <div class="row text-center">
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark ">Height: {{height}}</span>
-                                                </h5>
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark ">Weight: {{weight}}</span>
-                                                </h5>
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark ">Attack: {{ataque}}</span>
-                                                </h5>
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark">Defense: {{defensa}}</span>
-                                                </h5>
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark">Attack-Sp: {{especial}}</span>
-                                                </h5>
-                                                <h5 class="col-6">
-                                                    <span class="badge bg-light text-dark">Speed: {{speed}}</span>
-                                                </h5>
+                                                <h4 class="col-6">
+                                                    <p><strong>Height: {{data.height}}</strong></p>
+                                                </h4>
+                                                <h4 class="col-6">
+                                                    <p><strong>Weight: {{data.weight}}</strong></p>
+                                                </h4>
+                                                <h4 class="col-6">
+                                                    <p><strong>Attack: {{data.ataque}}</strong></p>
+                                                </h4>
+                                                <h4 class="col-6">
+                                                    <p><strong>Defense: {{data.defensa}}</strong></p>
+                                                </h4>
+                                                <h4 class="col-6">
+                                                    <p><strong>Attack-Sp: {{data.especial}}</strong></p>
+                                                </h4>
+                                                <h4 class="col-6">
+                                                    <p><strong>Speed: {{data.speed}}</strong></p>
+                                                </h4>
                                             </div>
                                        
                                       </ng-template>
@@ -54,9 +61,9 @@
                                       <a ngbNavLink>Abilities</a>
                                       <ng-template ngbNavContent>
                                         <div class="row text-center">
-                                            <h5 class="col-6" *ngFor="let ability of abilitis" >
-                                                <span class="badge bg-light text-dark ">{{ability}}</span>
-                                            </h5>
+                                            <h4 class="col-6" *ngFor="let ability of data.abilitis" >
+                                                <p><strong>{{ability}}</strong></p>
+                                            </h4>
                                         </div>
                                       </ng-template>
                                     </li>
@@ -65,16 +72,13 @@
                                       <ng-template ngbNavContent>
                                         <div class="row text-center">
                                             <div class="scrool">
-                                                <!-- <h5 class="col-6" *ngFor="let move of moves| slice:0:stop;" > -->
-                                                <h5 class="" *ngFor="let move of moves" >
-                                                    <span class="badge bg-light text-dark" >{{move}}</span>
-                                                </h5>
+                                               
+                                                <h4 class="" *ngFor="let move of data.moves" >
+                                                    <p><strong>{{move}}</strong></p>
+                                                </h4>
                                             </div>
                                         </div>
-                                        <!-- <div class="col-12">
-                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(1)">+</button>
-                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(2)">-</button>
-                                        </div> -->
+                                 
                                       </ng-template>
                                     </li>
                                   </ul>
@@ -86,5 +90,12 @@
 	            </div>
 			</div>
 		</div>
-	</div>
-</body>
+	</div> 
+    
+</body>-->
+<app-paginator></app-paginator>
+                                        <!-- <div class="col-12">
+                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(1)">+</button>
+                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(2)">-</button>
+                                        </div> --> 
+                                        <!-- <h5 class="col-6" *ngFor="let move of moves| slice:0:stop;" > -->

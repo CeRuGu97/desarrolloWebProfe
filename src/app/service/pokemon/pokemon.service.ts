@@ -26,5 +26,10 @@ export class PokemonService extends HttpClientService {
     const url: string = this.endpoint.id;
     return this.get(url.replace('_id_', id));
   }
+
+  public getPokemonByPage(limit: any, offset: any): Promise<any>{
+    const url: string = this.endpoint.pagination;
+    return this.get(url.replace('_limit_', limit).replace('_offset_', offset));
+  }
   
 }

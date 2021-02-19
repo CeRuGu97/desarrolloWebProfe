@@ -5,17 +5,16 @@
   --dark-gray: hsl(0, 0%, 59%);
 }
 
-body{
-    /* background: #f8f9fa;  */
+/* body{
     background: var(--dark-cyan);
     background-image: url("../../../images/bg-pattern-top.svg"), url("../../../images/bg-pattern-bottom.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: right 50vw bottom 50vh, left 50vw top 50vh;
   
-}
+} */
 
 .principal{
-	margin-top:50px;
+	/* margin-top:50px; */
 	font-family: 'Roboto';
 }
 

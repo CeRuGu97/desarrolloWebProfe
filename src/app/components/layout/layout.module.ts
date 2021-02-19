@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ShareModule } from 'src/app/shared/share.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+//import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [LayoutComponent, DashboardComponent],
@@ -14,7 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     LayoutRoutingModule,
     ShareModule,
-    NgbModule
+    NgbModule,
+    
   ],
   bootstrap: [DashboardComponent],
   exports: [DashboardComponent],
