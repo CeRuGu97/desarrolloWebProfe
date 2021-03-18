@@ -1,23 +1,20 @@
 <app-header (name)='getPokemon($event)'  ></app-header>
-<!-- <body>
 
     <div *ngIf="error">
         <div class="alert alert-danger" role="alert">
             NO EXISTE ESE POKEMON INTENTA DE NUEVO 
           </div>
     </div>
-    <div class="container principal">
-		<div class="">
-			<div class="col-lg-12 text-center">
-	            <div class="row">
-                    
-	                <div class="col-lg-4 col-md-6 mb-4">
-	                  	<div class="card-section border rounded p-3 mt-3">
-                            <div>
-                                <img src="{{data.img}}" alt="" class="card-body-img">
+    <div class="container text-center">
+        <div class="row">
+            
+            <!-- <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-section border rounded p-3 mt-3">
+                    <div>
+                        <img src="{{data.img}}" alt="" class="card-body-img">
                             </div>
-	                  		<div class="card-header-first rounded pb-5">
-		                      	<h2 class="card-header-title text-black pt-3 "><strong>{{data.name}}</strong></h2>
+                            <div class="card-header-first rounded pb-5">
+                                <h2 class="card-header-title text-black pt-3 "><strong>{{data.name}}</strong></h2>
                                 <div class="row text-white">
                                     <div class="col-4">
                                         <span class="">{{data.type}}</span>
@@ -31,11 +28,11 @@
 	                    	<div class="card-body">
                                 <ul ngbNav #nav="ngbNav"  class="nav-tabs">
                                     <li [ngbNavItem]="1">
-                                      <a ngbNavLink>Basic</a>
+                                        <a ngbNavLink>Basic</a>
                                       <ng-template ngbNavContent>
                                     
-                                            <div class="row text-center">
-                                                <h4 class="col-6">
+                                          <div class="row text-center">
+                                              <h4 class="col-6">
                                                     <p><strong>Height: {{data.height}}</strong></p>
                                                 </h4>
                                                 <h4 class="col-6">
@@ -54,48 +51,54 @@
                                                     <p><strong>Speed: {{data.speed}}</strong></p>
                                                 </h4>
                                             </div>
-                                       
-                                      </ng-template>
+                                            
+                                        </ng-template>
                                     </li>
                                     <li [ngbNavItem]="2">
                                       <a ngbNavLink>Abilities</a>
                                       <ng-template ngbNavContent>
-                                        <div class="row text-center">
+                                          <div class="row text-center">
                                             <h4 class="col-6" *ngFor="let ability of data.abilitis" >
                                                 <p><strong>{{ability}}</strong></p>
                                             </h4>
                                         </div>
-                                      </ng-template>
-                                    </li>
+                                    </ng-template>
+                                </li>
                                     <li [ngbNavItem]="3">
-                                      <a ngbNavLink>Moves</a>
-                                      <ng-template ngbNavContent>
+                                        <a ngbNavLink>Moves</a>
+                                        <ng-template ngbNavContent>
                                         <div class="row text-center">
                                             <div class="scrool">
-                                               
+                                                
                                                 <h4 class="" *ngFor="let move of data.moves" >
                                                     <p><strong>{{move}}</strong></p>
                                                 </h4>
                                             </div>
                                         </div>
-                                 
+                                        
                                       </ng-template>
                                     </li>
-                                  </ul>
+                                </ul>
                                   <div [ngbNavOutlet]="nav" class="mt-2"></div>
                             </div>
-	                  	</div>
+                        </div>
 	                </div>
                     
 	            </div>
-			</div>
-		</div>
-	</div> 
+			</div> -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col" *ngFor="let pokemon of dataPokemonPaginate">
+                    <div class="card-section border rounded p-3 mt-3">
+                        <h4>
+                            <p><strong>{{pokemon.name}}</strong></p>
+                         </h4>
+                    </div>
+                </div>
+            </div>
+            <app-paginator (dataArray)='getPokemonPaginate($event)' ></app-paginator>
+        </div>
+
     
-</body>-->
-<app-paginator></app-paginator>
-                                        <!-- <div class="col-12">
-                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(1)">+</button>
-                                            <button type="button" class="btn btn-light btn-sm col-6" (click)="mas(2)">-</button>
-                                        </div> --> 
-                                        <!-- <h5 class="col-6" *ngFor="let move of moves| slice:0:stop;" > -->
+    

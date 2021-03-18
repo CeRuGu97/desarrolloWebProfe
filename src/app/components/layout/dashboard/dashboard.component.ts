@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
+//import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { PokemonService } from 'src/app/service/pokemon/pokemon.service';
 
 
@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
     data: any = {};
     error: boolean;
+    dataPokemonPaginate;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -85,7 +86,7 @@ export class DashboardComponent implements OnInit {
       })
     }  
   getPokemon(event){
-      // console.log(event)
+        //console.log(event)
       if(!isNaN(Number(event))){
         let numer = Number(event)
         // console.log('es numero: '+ numer )
@@ -96,6 +97,11 @@ export class DashboardComponent implements OnInit {
       }
       
     }
-    
+  getPokemonPaginate(event){
+    console.log(event);
+    this.dataPokemonPaginate = event;
+  
+    //console.log(this.dataPokemonPaginate);
+    }
 }
   
